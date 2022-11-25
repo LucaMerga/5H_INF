@@ -17,7 +17,7 @@
 	require('Function_Form.php');
 
 	//inizializzazione delle variabili 
-  $erroreN=$erroreC=$erroreD=$erroreE=$erroreT=$erroreI=$errorePr=$erroreCm=$erroreCap=$erroreU=$erroreP="";
+	$erroreN=$erroreC=$erroreD=$erroreE=$erroreT=$erroreI=$errorePr=$erroreCm=$erroreCap=$erroreU=$erroreP="";
 	$nome=$cognome=$data=$email=$telefono=$indirizzo=$provincia=$comune=$cap=$username=$psw="";
 	
 	//se i campi sono inizializzati (tutte le volte che premi il tasto login)
@@ -40,7 +40,7 @@
 		
 		//se non ci sono errori effetua l'accesso altrimenti ricarica il form (con eventuali errori)
 		if($erroreN=="" && $erroreC=="" && $erroreD=="" && $erroreE=="" && $erroreT=="" && $erroreI=="" && $errorePr=="" && $erroreCm=="" && $erroreCap=="" && $erroreU=="" && $erroreP==""){
-			echo 'Benvenuto nella tua pagina riservata';
+			echo 'Benvenuto '.$nome.' nella tua pagina riservata.';
 		}
 		else{
 			form($erroreN,$erroreC,$erroreD,$erroreE,$erroreT,$erroreI,$errorePr,$erroreCm,$erroreCap,$erroreU,$erroreP);	
