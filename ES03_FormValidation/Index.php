@@ -40,7 +40,7 @@
 		
 		//se non ci sono errori effetua l'accesso altrimenti ricarica il form (con eventuali errori)
 		if($erroreN=="" && $erroreC=="" && $erroreD=="" && $erroreE=="" && $erroreT=="" && $erroreI=="" && $errorePr=="" && $erroreCm=="" && $erroreCap=="" && $erroreU=="" && $erroreP==""){
-			echo 'Benvenuto '.$nome.' nella tua pagina riservata.';
+			echo 'Benvenuto '.$username.' nella tua pagina riservata.';
 		}
 		else{
 			form($erroreN,$erroreC,$erroreD,$erroreE,$erroreT,$erroreI,$errorePr,$erroreCm,$erroreCap,$erroreU,$erroreP);	
