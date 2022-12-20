@@ -13,9 +13,6 @@
 	
 </head>
 <body>
-    <h1>Web app1</h1>
-    <a href="login.php">login</a>
-    <br><br>
-    <a href="riservata.php">riservata</a>
+    
 </body>
 </html>

@@ -13,9 +13,12 @@
 	
 </head>
 <body>
-    <h1>Web app1</h1>
-    <a href="login.php">login</a>
+<?php
+    echo 'ciao . $_SESSION['nome']';
+?>
     <br><br>
-    <a href="riservata.php">riservata</a>
+    <a href="index.php">torna alla home</a>
+    <br><br>
+    <a href="logout.php">logout</a>
 </body>
 </html>
