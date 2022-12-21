@@ -8,16 +8,18 @@
 }
 
 body{
+    /* color: white; */
+    text-align: center;
     height: 100vh;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     padding: 10px;
-    /*background: linear-gradient(135deg, #71b7e6, #9b59b6);*/
     background-color: #080710;
 }
 
 .container{
+    text-align: left;
     max-width: 700px;
     width: 100%;
     /*background-color: #ffffff;*/
@@ -130,14 +132,4 @@ form .button input:hover{
    .container .contenuto{
         flex-direction: column;
    }
-}
- 
-.error {
-    color: red;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }
