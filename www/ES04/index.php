@@ -17,5 +17,7 @@
     <a href="login.php">login</a>
     <br><br>
     <a href="riservata.php">riservata</a>
+    <br><br>
+    <a href="logout.php">logout</a>
 </body>
 </html>

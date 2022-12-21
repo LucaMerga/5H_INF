@@ -13,6 +13,18 @@
 	
 </head>
 <body>
-    
+<?php
+	if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
+        echo 'Non sei loggato non puoi fare il logout!';
+        echo '<br>Torna a <a href="index.php">home</a>';
+    }else{
+	echo 'Logout effettuato.';
+    session_destroy();
+?>
+	<br><br>
+    <a href="index.php">Torna alla home</a>
+<?php
+	}
+?>
 </body>
 </html>

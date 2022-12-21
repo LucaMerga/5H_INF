@@ -54,10 +54,7 @@
                 echo '<br>Torna a <a href="login.php">login</a>';
             }
         }
-    }else{
-        header("location: riservata.php");
-    }
-        
+    }  
 ?>
 </body>
 </html>

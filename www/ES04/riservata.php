@@ -14,11 +14,18 @@
 </head>
 <body>
 <?php
-    echo 'ciao . $_SESSION['nome']';
+    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
+        echo 'Non sei loggato non puoi entrare!';
+        echo '<br>Vai a <a href="login.php">login</a>';
+    }else{
+        echo 'Benvenuto ' . $_SESSION['nome'] . ' nella tua pagina riservata.';
 ?>
-    <br><br>
-    <a href="index.php">torna alla home</a>
-    <br><br>
-    <a href="logout.php">logout</a>
+        <br><br>
+        <a href="index.php">Torna alla home</a>
+        <br><br>
+        <a href="logout.php">Logout</a>
+<?php
+    }
+?>
 </body>
 </html>
