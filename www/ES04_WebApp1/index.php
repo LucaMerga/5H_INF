@@ -15,11 +15,26 @@
 	<link rel="stylesheet" type="text/css" href="stile/Stile_WebApp1.css"/>
 </head>
 <body>
-    <h1>Web app1</h1>
-    <a href="login.php">Login</a>
-    <br><br>
-    <a href="riservata.php">Riservata</a>
-    <br><br>
-    <a href="logout.php">Logout</a>
+<?php
+    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
+?>
+        <h1>Web app1</h1>
+        <a href="login.php">Login</a>
+        <br><br>
+        <a href="riservata.php">Riservata</a>
+        <br><br>
+        <a href="logout.php">Logout</a>
+<?php
+    }else{
+?>
+        <h1>Web app1</h1>
+        <!-- <a href="login.php">Login</a>
+        <br><br> -->
+        <a href="riservata.php">Riservata</a>
+        <br><br>
+        <a href="logout.php">Logout</a>     
+<?php   
+    }
+?>
 </body>
 </html>
