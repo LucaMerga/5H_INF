@@ -1,4 +1,5 @@
 <?php
+    // avvio una nuova sessione riprendo quella esistente
     session_start();
 ?>
 
@@ -16,17 +17,19 @@
 </head>
 <body>
 <?php
-	if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
+	// controllo esistenza della sessione
+	if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){	// se non esiste - mostro messaggio d'errore e i 2 link
         echo 'Non sei loggato non puoi fare il logout!';
         echo '<br><br>Vai a <a href="login.php">login</a>';
         echo '<br><br>Torna a <a href="index.php">home</a>';
-    }else{
-	echo 'Logout effettuato.';
-    session_destroy();
+    }else{	// se esiste - mostro messaggio di conferma e il link per tornare alla home e distruggo la sessione
+		echo 'Logout effettuato.';
 ?>
-	<br><br>
-    <a href="index.php">Torna alla home</a>
+		<br><br>
+    	<a href="index.php">Torna alla home</a>
 <?php
+		// distruggo tutti i dati della sessione 
+    	session_destroy();
 	}
 ?>
 </body>

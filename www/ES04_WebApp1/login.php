@@ -1,5 +1,6 @@
 <?php
-    session_start();
+    // avvio una nuova sessione riprendo quella esistente
+    session_start(); 
 ?>
 
 <html>
@@ -16,9 +17,9 @@
 </head>
 <body>
 <?php
-    //verifichia,mo che l'utente abbia già fatto il login
-    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
-        if(!isset($_POST['login'])){ 
+    // controllo esistenza della sessione
+    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){  // se non esiste - carico il form o controllo le credenziali
+        if(!isset($_POST['login'])){    // controllo se i campi non sono stati inizializzati - mostro il form
             $nome="";$password="";
 ?>
             <div class="container">	<!-- div contenente il form e il titolo per modifiche css -->
@@ -45,18 +46,19 @@
                         </div>
                     </form>
                 </div>
+                Torna a <a href="index.php">home</a>
 		    </div>
 <?php     
-        }else{
+        }else{  // se invece sono stati inizializzati - controllo credenziali
             $nome=$_POST['nome'];
             $psw=$_POST['password'];
             //controllo credenziali
-            if($nome=="Luca" && $psw=="ciao"){
+            if($nome=="Luca" && $psw=="ciao"){  // se corrispondono creo variabili di sessione e carcio riservata.php
                 $_SESSION['nome']=$nome;
                 $_SESSION['psw']=$psw;
                 header("location: riservata.php");
             }
-            else{
+            else{   // altrimenti mostro messaggio d'errore con link per tornare a home e login
                 echo 'non puoi accedere alla pagina riservata con queste credenziali!';
                 echo '<br><br>Torna a <a href="login.php">login</a>';
                 echo '<br><br>Torna a <a href="index.php">home</a>';

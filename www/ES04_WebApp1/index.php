@@ -1,4 +1,5 @@
 <?php
+    // avvio una nuova sessione riprendo quella esistente
     session_start();
 ?>
 
@@ -16,7 +17,8 @@
 </head>
 <body>
 <?php
-    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
+    // controllo esistenza della sessione
+    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){  // se non esiste - mostro i 3 link
 ?>
         <h1>Web app1</h1>
         <a href="login.php">Login</a>
@@ -25,11 +27,9 @@
         <br><br>
         <a href="logout.php">Logout</a>
 <?php
-    }else{
+    }else{  // se esiste - mostro i 2 link (senza login)
 ?>
         <h1>Web app1</h1>
-        <!-- <a href="login.php">Login</a>
-        <br><br> -->
         <a href="riservata.php">Riservata</a>
         <br><br>
         <a href="logout.php">Logout</a>     

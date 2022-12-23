@@ -1,4 +1,5 @@
 <?php
+    // avvio una nuova sessione riprendo quella esistente
     session_start();
 ?>
 
@@ -16,11 +17,12 @@
 </head>
 <body>
 <?php
-    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){
+    // controllo esistenza della sessione
+    if(!isset($_SESSION['nome']) || empty($_SESSION['nome'])){  // se non esiste - mostro messaggio d'errore e i 2 link
         echo 'Non sei loggato non puoi entrare!';
         echo '<br><br>Vai a <a href="login.php">login</a>';
         echo '<br><br>Torna a <a href="index.php">home</a>';
-    }else{
+    }else{  // se esiste - mostro messaggio di benvenuto e i link per tornare alla home o per fare il logout
         echo 'Benvenuto ' . $_SESSION['nome'] . ' nella tua pagina riservata.';
 ?>
         <br><br>
