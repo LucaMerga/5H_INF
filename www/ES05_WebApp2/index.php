@@ -34,7 +34,7 @@
         <br><br>
         <a href="reset_Password.php">Resetta password</a>
         <br><br>
-		<a href="delete_User.php">Cancella utente</a>
+		<a href="delete_User.php">Cancella account</a>
         <br><br>
         <a href="logout.php">Logout</a>     
 <?php   
