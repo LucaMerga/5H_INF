@@ -18,7 +18,7 @@ function login($username, $password){
 			$_SESSION['password']=$password;
 			return array(true, "Benvenuto ". $username . "<br><br>Vai a <a href='riservata.php'>riservata</a>");	// return con valore true e messaggio di benvenuto
 		} else {
-			return array(false, "Username o password errati! <br><br>Torna a <a href='login.php'>login</a>"); 	// return con valore false e messaggio di credenziali sbagliate
+			return array(false, "Username o password errati! <br><br><a href='registrazione.php'>Registrati</a> oppure torna a <a href='login.php'>login</a>"); 	// return con valore false e messaggio di credenziali sbagliate
 		}
 		$pdo = null; // Chiudi la connessione al database
 	} catch (PDOException $e) {
